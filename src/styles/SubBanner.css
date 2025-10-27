@@ -1,0 +1,59 @@
+.subbanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 30vh;
+  background: #fff7f9;
+  padding: 0 8%;
+  box-sizing: border-box;
+}
+
+.subbanner-left {
+  flex: 0 0 50%;
+}
+
+.subbanner-right {
+  flex: 0 0 50%;
+    color: #111;
+}
+
+.subbanner-left h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #111;
+  line-height: 1.1;
+  max-width: 90%;
+}
+
+.subbanner-right p {
+  font-size: 1.4rem;
+  color: #444;
+  line-height: 1.6;
+  max-width: 90%;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .subbanner {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 80px 5%;
+  }
+
+  .subbanner-left,
+  .subbanner-right {
+    flex: none;
+    width: 100%;
+  }
+
+  .subbanner-left h2 {
+    font-size: 2.4rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .subbanner-right p {
+    font-size: 1.1rem;
+  }
+}
