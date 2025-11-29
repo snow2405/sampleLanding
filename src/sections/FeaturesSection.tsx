@@ -4,34 +4,32 @@ import feature2 from "../assets/feature2.jpg";
 import feature3 from "../assets/feature3.jpg";
 import feature4 from "../assets/feature4.jpg";
 import feature1 from "../assets/feature1.jpg";
-import { useLanguage } from "../i18n/LanguageContext";
+
+const features = [
+  {
+    title: "19 Uhr: Freue dich auf neue Profile",
+    text: "Jeden Tag um 19:00 Uhr schicken wir dir potenzielle Matches, von denen wir glauben, dass sie dir gefallen könnten.",
+    image: feature2,
+  },
+  {
+    title: "Du und deine wertvolle Zeit liegen uns am Herzen",
+    text: "Hast du ein Match, kann es sofort losgehen. Du füllst einen Dateplaner aus, und wir organisieren euer erstes Treffen.",
+    image: feature3,
+  },
+  {
+    title: "Auf die Plätze, fertig, Date!",
+    text: "Unsere Partnerlokale freuen sich darauf, dir und deinem gsehni-Date ein sicheres, angenehmes Treffen zu ermöglichen.",
+   image: feature4,
+  }, 
+  {
+    title: "Sicher. Verifiziert. Ungezwungen.",
+    text: "Alle Datenden sind verifiziert, treffen sich an sicheren Orten, und Ghoster verlieren ihr Konto. Unser Support-Team ist immer für dich da.",
+    image: feature1,
+  },
+];
 
 const FeaturesSection = () => {
-  const { t } = useLanguage();
   const featureRefs = useRef<(HTMLDivElement | null)[]>([]);
-
-  const features = [
-    {
-      title: t.features.feature1.title,
-      text: t.features.feature1.text,
-      image: feature2,
-    },
-    {
-      title: t.features.feature2.title,
-      text: t.features.feature2.text,
-      image: feature3,
-    },
-    {
-      title: t.features.feature3.title,
-      text: t.features.feature3.text,
-      image: feature4,
-    },
-    {
-      title: t.features.feature4.title,
-      text: t.features.feature4.text,
-      image: feature1,
-    },
-  ];
 
   useEffect(() => {
     const observers = featureRefs.current.map((ref, index) => {
@@ -56,12 +54,12 @@ const FeaturesSection = () => {
       return observer;
     });
 
-      return () => {
+    return () => {
       observers.forEach((observer) => {
         if (observer) observer.disconnect();
       });
     };
-  }, [t]);
+  }, []);
 
   return (
     <section className="features">
