@@ -1,4 +1,12 @@
 :root {
+  /* Color Palette */
+  --color-white: #FFF;
+  --color-roasarian: #FAEADD;
+  --color-purple-dark: #3C2153;
+  --color-purple-light: #522A6F;
+  --color-secondary-accent: #DDAAFF;
+  --color-text-dark: #222023;
+
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
