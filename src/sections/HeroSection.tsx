@@ -1,38 +1,52 @@
 import { useState } from "react";
 import heroVideo from "../assets/hero-video.mp4";
+import { useLanguage } from "../i18n/LanguageContext";
+import LanguageSwitcher from "../components/LanguageSwitcher";
 
 export default function HeroSection() {
+  const { t } = useLanguage();
   const [phone, setPhone] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
+  const phoneRegex = /^[+0-9\s()-]*$/;
 
-const phoneRegex = /^[+0-9\s()-]*$/;
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!phone.trim() || loading) return;
 
-const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-  if (!phone.trim() || loading) return;
+    if (!phoneRegex.test(phone)) {
+      alert(t.hero.errorInvalidPhone);
+      return;
+    }
 
-  if (!phoneRegex.test(phone)) {
-    alert("Bitte gib e gältigi Telefonnummer ih (nur Ziffere und +).");
-    return;
-  }
+    setLoading(true);
+    try {
+      await fetch("/api/savePhone", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ phone }),
+      });
+      setSubmitted(true);
+    } catch (err) {
+      console.error("Error submitting phone:", err);
+      alert(t.hero.errorSubmit);
+    } finally {
+      setLoading(false);
+    }
+  };
 
-  setLoading(true);
-  try {
-    await fetch("/api/savePhone", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ phone }),
+  // Parse description to handle <u> tags
+  const parseDescription = (text: string) => {
+    const parts = text.split(/(<u>.*?<\/u>)/);
+    return parts.map((part, index) => {
+      if (part.startsWith('<u>') && part.endsWith('</u>')) {
+        const content = part.replace(/<\/?u>/g, '');
+        return <u key={index}>{content}</u>;
+      }
+      return <span key={index}>{part}</span>;
     });
-    setSubmitted(true);
-  } catch (err) {
-    console.error("Error submitting phone:", err);
-    alert("Etwas isch schief gloffe — probier’s nomol!");
-  } finally {
-    setLoading(false);
-  }
-};
+  };
 
 
 
@@ -40,45 +54,45 @@ const handleSubmit = async (e: React.FormEvent) => {
   return (
     <section className="hero">
       <div className="hero-logo">👀 gsehni</div>
+      <LanguageSwitcher />
       <div className="hero-left">
-        <h1>Die Eifachi, Sicheri und Seriösi Dating App.</h1>
+        <h1>{t.hero.title}</h1>
         <p>
-          Gang uf spannendi <u>offline</u> Dates anstatt dini Ziit mit endlosem Swipe
-          und Chatte z'verschwende.
+          {parseDescription(t.hero.description)}
         </p>
 
           {!submitted ? (
             <form onSubmit={handleSubmit} className="notify-form">
               <label htmlFor="phone" className="form-label">
-                ✨ Wötsch Nummere ustüschle? ✨
+                {t.hero.formLabel}
               </label>
 
               <div className="form-row">
               <input
                 type="tel"
                 id="phone"
-                placeholder="+41 79 123 45 67"
+                placeholder={t.hero.phonePlaceholder}
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 required
                 disabled={loading}
                 inputMode="tel"
                 pattern="^[+0-9\s()-]*$"
-                title="Bitte gib nur Ziffern und das + Zeichen ein."
+                title={t.hero.phoneTitle}
               />
 
                 <button type="submit" disabled={loading}>
-                  {loading ? "Wird gschickt..." : "Apply for Invite"}
+                  {loading ? t.hero.buttonLoading : t.hero.buttonSubmit}
                 </button>
               </div>
 
               <small className="privacy-note">
-                (Mir teiled dini Date mit niemertem – mir bruched sie nume zum di informiere, wenn du döffsch d'App usprobiere)
+                {t.hero.privacyNote}
               </small>
             </form>
           ) : (
             <p className="success-message">
-              💌 Merci! Mir melded eus, sobald du chasch loslegä.
+              {t.hero.successMessage}
             </p>
           )}
       </div>
