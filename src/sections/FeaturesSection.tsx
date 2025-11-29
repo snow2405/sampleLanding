@@ -34,7 +34,7 @@ const FeaturesSection = () => {
   ];
 
   useEffect(() => {
-    const observers = featureRefs.current.map((ref, index) => {
+    const observers = featureRefs.current.map((ref) => {
       if (!ref) return null;
 
       const observer = new IntersectionObserver(
@@ -67,7 +67,7 @@ const FeaturesSection = () => {
     <section className="features">
       {features.map((f, i) => (
         <div
-          ref={(el) => (featureRefs.current[i] = el)}
+          ref={(el) => { featureRefs.current[i] = el; }}
           className={`feature-row ${i % 2 === 0 ? "normal" : "reverse"}`}
           key={i}
         >
