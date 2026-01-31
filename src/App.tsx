@@ -1,19 +1,20 @@
 import './styles/App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { LanguageProvider } from './i18n/LanguageContext';
-import HeroSection from './sections/HeroSection';
-import FeaturesSection from './sections/FeaturesSection';
-import SubBanner from './sections/SubBanner';
-import AGBSection from './sections/AGBSection';
-import Footer from './sections/Footer';
+import HomePage from './pages/HomePage';
+import TermsPage from './pages/TermsPage';
+import SupportPage from './pages/SupportPage';
 
 function App() {
   return (
     <LanguageProvider>
-      <HeroSection />
-      <SubBanner />   
-      <FeaturesSection />
-      <AGBSection />
-      <Footer /> 
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/terms" element={<TermsPage />} />
+          <Route path="/support" element={<SupportPage />} />
+        </Routes>
+      </Router>
     </LanguageProvider>
   );
 }

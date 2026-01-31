@@ -1,0 +1,269 @@
+.support-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+}
+
+.support-nav {
+  background: white;
+  padding: 20px 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.support-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.support-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.support-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.support-header h1 {
+  font-size: 3rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.support-header p {
+  font-size: 1.3rem;
+  color: #6c757d;
+}
+
+.support-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.support-section {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.support-section h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.faq-item {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e8ecf1;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.faq-item h3 {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.faq-item p {
+  color: #495057;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+.english-text {
+  background: #f8f9fa;
+  padding: 15px;
+  border-left: 3px solid #007bff;
+  margin-top: 15px;
+  font-size: 0.95rem;
+}
+
+.contact-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.contact-section h2,
+.contact-section p {
+  color: white;
+}
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.contact-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.contact-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.contact-card h3 {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.contact-card p {
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.contact-email {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.contact-email:hover {
+  background: #0056b3;
+}
+
+.response-info {
+  background: #d1ecf1;
+  border-left: 5px solid #0c5460;
+}
+
+.response-info h2 {
+  color: #0c5460;
+}
+
+.response-info p {
+  color: #0c5460;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.safety-section {
+  background: #fff3cd;
+  border-left: 5px solid #856404;
+}
+
+.safety-section h2 {
+  color: #856404;
+}
+
+.safety-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.safety-section ul li {
+  padding: 10px 0;
+  color: #856404;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.resources-section {
+  background: #e7f3ff;
+  border-left: 5px solid #004085;
+}
+
+.resources-section h2 {
+  color: #004085;
+}
+
+.resource-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.resource-link {
+  display: block;
+  padding: 15px 25px;
+  background: white;
+  color: #007bff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.resource-link:hover {
+  background: #007bff;
+  color: white;
+  transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+  .support-nav {
+    padding: 15px 20px;
+  }
+
+  .support-logo {
+    font-size: 1.2rem;
+  }
+
+  .support-container {
+    padding: 40px 15px;
+  }
+
+  .support-header h1 {
+    font-size: 2rem;
+  }
+
+  .support-header p {
+    font-size: 1.1rem;
+  }
+
+  .support-section {
+    padding: 25px 20px;
+  }
+
+  .support-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-item h3 {
+    font-size: 1.1rem;
+  }
+}
