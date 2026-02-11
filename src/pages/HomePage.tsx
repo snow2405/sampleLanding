@@ -3,6 +3,7 @@ import FeaturesSection from '../sections/FeaturesSection';
 import SubBanner from '../sections/SubBanner';
 import AGBSection from '../sections/AGBSection';
 import Footer from '../sections/Footer';
+import PhoneSignupForm from '../components/PhoneSignupForm';
 
 export default function HomePage() {
   return (
@@ -10,7 +11,7 @@ export default function HomePage() {
       <HeroSection />
       <SubBanner />   
       <FeaturesSection />
-      <AGBSection />
+      <PhoneSignupForm />
       <Footer /> 
     </>
   );

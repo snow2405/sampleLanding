@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import AGBSection from '../sections/AGBSection';
 import '../styles/LegalPage.css';
 
 export default function TermsPage() {
@@ -8,6 +9,8 @@ export default function TermsPage() {
         <Link to="/" className="back-link">← Back to Home</Link>
         <div className="legal-logo">👀 gsehni</div>
       </nav>
+
+      <AGBSection />
 
       <div className="legal-page-container">
         

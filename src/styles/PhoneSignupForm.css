@@ -1,0 +1,18 @@
+.phone-signup-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  background: #FAEADD;
+}
+
+.phone-signup-container {
+  max-width: 750px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .phone-signup-section {
+    padding: 60px 20px;
+  }
+}

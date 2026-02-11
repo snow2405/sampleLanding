@@ -7,7 +7,7 @@
   min-height: 100vh;
   margin: 0;
   overflow: hidden;
-  background: linear-gradient(135deg, #FFF 0%, #FAEADD 50%, #FFF 100%);
+  background: #FAEADD;
   position: relative;
 }
 
@@ -64,7 +64,6 @@
   overflow: hidden;
   position: relative;
   z-index: 1;
-  border-radius: 0 0 0 48px;
   box-shadow: -8px 0 32px rgba(60, 33, 83, 0.08);
 }
 
@@ -73,16 +72,15 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  border-radius: 0 0 0 48px;
 }
 
 .hero-left h1 {
   font-size: 4.5rem;
-  font-weight: 600;
+  font-weight: 900;
   color: var(--color-text-dark);
   line-height: 1.1;
   margin-bottom: 1.5rem;
-  margin-right: -15rem;
+  margin-right: -25rem;
   position: relative;
   z-index: 3;
   display: inline-block;
@@ -100,7 +98,7 @@
 
 .hero-left p u {
   text-decoration: none;
-  background: linear-gradient(120deg, rgba(221, 170, 255, 0.3) 0%, rgba(221, 170, 255, 0.3) 100%);
+  background: linear-gradient(120deg, rgba(221, 170, 255, 0.6) 0%, rgba(221, 170, 255, 0.6) 100%);
   background-repeat: no-repeat;
   background-size: 100% 0.3em;
   background-position: 0 85%;
@@ -277,12 +275,7 @@
     order: 1;
     width: 100%;
     height: 50vh;
-    border-radius: 0;
     box-shadow: none;
-  }
-
-  .hero-video {
-    border-radius: 0;
   }
 
   .form-row {
