@@ -1,8 +1,17 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AGBSection from '../sections/AGBSection';
+import { analytics } from '../utils/analytics';
 import '../styles/LegalPage.css';
 
 export default function TermsPage() {
+  useEffect(() => {
+    analytics.event('page_visit', {
+      page_name: 'terms',
+      page_path: '/terms',
+    });
+  }, []);
+
   return (
     <div className="legal-page">
       <nav className="legal-nav">

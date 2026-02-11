@@ -1,7 +1,16 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { analytics } from '../utils/analytics';
 import '../styles/SupportPage.css';
 
 export default function SupportPage() {
+  useEffect(() => {
+    analytics.event('page_visit', {
+      page_name: 'support',
+      page_path: '/support',
+    });
+  }, []);
+
   return (
     <div className="support-page">
       <nav className="support-nav">

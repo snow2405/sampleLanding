@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useLanguage } from "../i18n/LanguageContext";
+import { analytics } from "../utils/analytics";
 import "../styles/PhoneSignupForm.css";
 
 export default function PhoneSignupForm() {
@@ -16,9 +17,14 @@ export default function PhoneSignupForm() {
 
     if (!phoneRegex.test(phone)) {
       alert(t.hero.errorInvalidPhone);
+      analytics.event('form_validation_error', {
+        form_name: 'phone_signup',
+        error_type: 'invalid_phone_format',
+      });
       return;
     }
 
+    analytics.buttonClick('submit_phone', 'signup_form');
     setLoading(true);
     try {
       await fetch("/api/savePhone", {
@@ -27,12 +33,18 @@ export default function PhoneSignupForm() {
         body: JSON.stringify({ phone }),
       });
       setSubmitted(true);
+      analytics.formSubmit('phone_signup', true);
     } catch (err) {
       console.error("Error submitting phone:", err);
       alert(t.hero.errorSubmit);
+      analytics.formSubmit('phone_signup', false);
     } finally {
       setLoading(false);
     }
+  };
+
+  const handlePhoneFocus = () => {
+    analytics.inputFocus('phone_input', 'signup_form');
   };
 
   return (
@@ -51,6 +63,7 @@ export default function PhoneSignupForm() {
               placeholder={t.hero.phonePlaceholder}
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
+              onFocus={handlePhoneFocus}
               required
               disabled={loading}
               inputMode="tel"
