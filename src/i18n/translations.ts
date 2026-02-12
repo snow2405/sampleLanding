@@ -1,43 +1,43 @@
 export const translations = {
   de: {
     hero: {
-      title: 'Die Eifachi, Sicheri und Seriösi Dating App, ready to jump in?',
+      title: 'Die Eifachi, Sicheri und Seriösi Dating App. Ready to jump in?',
       description: 'Gang uf spannendi <u>offline</u> Dates anstatt dini Ziit mit endlosem Swipe und Chatte z\'verschwende.',
       formLabel: '✨ Wötsch Nummere ustüschle? ✨',
       phonePlaceholder: '+41 79 123 45 67',
       phoneTitle: 'Bitte gib nur Ziffern und das + Zeichen ein.',
       buttonLoading: 'Wird gschickt...',
       buttonSubmit: 'gsehni!',
-      privacyNote: '(Mir teiled dini Date mit niemertem – mir bruched sie nume zum di informiere, wenn du döffsch d\'App usprobiere)',
+      privacyNote: '(Mir teiled dini Date mit niemertem, mir bruched sie nume zum dich informiere, wenn du chasch d\'App usprobiere)',
       successMessage: '💌 Merci! Mir melded eus, sobald du chasch loslegä.',
-      errorInvalidPhone: 'Bitte gib e gältigi Telefonnummer ih (nur Ziffere und +).',
-      errorSubmit: 'Etwas isch schief gloffe — probier\'s nomol!',
+      errorInvalidPhone: 'Bitte gib e gültigi nummere ih (nur Ziffere und +).',
+      errorSubmit: 'Öppis isch schief gloffe — probier\'s nomol!',
     },
     subBanner: {
       heading: 'Gsesches nüm mit em Online-Dating?',
-      description: 'Mir wüssed wieter. Mir sind kei typeschi Dating-App. Bi eus gahts drum, dass du echti Lüt im echte Läbe triffsch – ohni stundenlang z chatte oder unzähligi Profile z swipen. Du hesch es Match? Perfekt! Mir organisiere öies erschts Date für dich. Eifach, sicher, echt.',
+      description: 'Mir wüssed wieter. Mir sind kei typeschi Dating-App. Bi eus gahts drum, dass du echti Lüt im echte Läbe triffsch. Ohni stundenlang zietverschwendä mit swipen. Du hesch en Match? Perfekt! Mir organisiered öies erschts Date und wenns funkt chönder dennach nummere ustüschle. Eifach, sicher, echt.',
       polaroidCaption: 'So funktioniert gsehni',
     },
     features: {
       feature1: {
-        title: '19 Uhr: Freu dich uf neuii Profile',
-        text: 'Jede Tag um 19:00 Uhr schicked mir dir potenzielli Matches, wo mir glaubed, dass si dir gfalled chönted.',
+        title: '18 Uhr: Freu dich uf neuii Profile',
+        text: 'Jede Tag am 18:00 Uhr schicke mir dir potenzielli Matches, wo mir glaubed, dass si dir gfalled chönted.',
       },
       feature2: {
-        title: 'Du und dini wertvolli Ziit lönd eus am Herze',
-        text: 'Hesch es Match, chans sofort losgah. Du füllsch en Dateplaner us, und mir organisiere öies erschts Treffe.',
+        title: 'Du und dini wertvolli Ziit lieged eus am Herze',
+        text: 'Hesch es Match, chans sofort losgah. Du füllsch de Dateplaner us, und mir organisiered öies erschte Treffe.',
       },
       feature3: {
-        title: 'Uf d Plätz, fertig, Date!',
-        text: 'Üsi Partnerlokal freued sich druf, dir und dim gsehni-Date es sicheres, ageneems Treffe z ermögliche.',
+        title: 'Ready, Set, Date!',
+        text: 'Eusi Partnerlokal freued sich druf, dir und dim gsehni-Date es sicheres, ageneems Treffe z ermögliche. Alli Partnerlokal sind sorgfältig usgwählt und wüssed bscheid das ihr chömed.',
       },
       feature4: {
-        title: 'Sicher. Verifiziert. Ungezwunge.',
-        text: 'Alli Date-Lüüt sind verifiziert, träffed sich a sichere Ort, und Ghoster verlüüred ihres Konto. Öises Support-Team isch immer für di da.',
+        title: 'Sicher. Verifiziert. Unzwunge.',
+        text: 'Alli Lüüt uf gsehni sind verifiziert, träffed sich a sichere Ort, und Ghoster verlüüred ihres Konto. Laufts mal nöd ideal, isch euses Support-Team immer für dich da.',
       },
       feature5: {
         title: 'Online-Dating-App für Offline-Dates',
-        text: 'Mir gönd en andere Wäg. Kei endlosi Swipes, kei stundenlangis Chatte. Bi eus gahts drum, echti Mönsche im echte Läbe z träffe.',
+        text: 'Mir gönd en andere Wäg. Kei endlosi Swipes, kei stundenlangis Chatte. Bi eus gahts drum, echti Mensche im echte Läbe z träffe.',
       },
       feature6: {
         title: 'Wahri Verbindige statt Profil-Sammlige',
@@ -45,7 +45,7 @@ export const translations = {
       },
     },
     footer: {
-      copyright: '© 2025 gsehni.com. Made with Love in Switzerland.',
+      copyright: '© 2025 gsehni.com. Mit viel liebii us Züri.',
     },
     languageSwitcher: {
       de: 'Dütsch',
@@ -65,8 +65,8 @@ export const translations = {
       terms: {
         title: '📋 AGB im Überblick',
         intro: 'Wichtigi Punkti für d\'Nutzig vo gsehni:',
-        point1: 'Du müesch mindeschtens 18 Jahr alt si',
-        point2: 'D\'Nutzig isch persönlich und darf nöd witergäh werde',
+        point1: 'Du muesch mindeschtens 18 Jahr alt si',
+        point2: 'D\'Nutzig isch persönlich und dörf nöd witergäh werde',
         point3: 'Respektvolli Umgang mit andere Nutzer*inne isch Pflicht',
         point4: 'Fake-Profile und Spam sind verbote',
         point5: 'Mir behalted eus s\'Rächt vor, Accounts z\'sperre bi Verstöss',
@@ -85,27 +85,27 @@ export const translations = {
     },  },
   en: {
     hero: {
-      title: 'The Simple, safe and serious dating experience, ready to jump in?',
+      title: 'The Simple, Safe and Serious dating app. Ready to jump in?',
       description: 'Go on exciting <u>offline</u> dates instead of wasting your time with endless swiping and chatting.',
       formLabel: '✨ Want to exchange numbers? ✨',
       phonePlaceholder: '+41 79 123 45 67',
       phoneTitle: 'Please enter only digits and the + sign.',
       buttonLoading: 'Sending...',
       buttonSubmit: 'gsehni!',
-      privacyNote: '(We don\'t share your data with anyone – we only use it to inform you when you can try the app)',
+      privacyNote: '(We don\'t share your data with anyone, we only use it to inform you when you can try the app)',
       successMessage: '💌 Thank you! We\'ll get in touch as soon as you can get started.',
       errorInvalidPhone: 'Please enter a valid phone number (only digits and +).',
       errorSubmit: 'Something went wrong — please try again!',
     },
     subBanner: {
       heading: 'Fed up with online dating?',
-      description: 'We know how to help. We\'re not your typical dating app. We focus on meeting real people in real life – without hours of chatting or endless profile swiping. You have a match? Perfect! We organize your first date for you. Simple, safe, real.',
+      description: 'We know how to help. We\'re not your typical dating app. We focus on meeting real people in real life, without wasting time on endless profile swiping. You have a match? Perfect! We organize your first date for you and if theres a spark you can exchange numbers afterwards. Simple, safe, real.',
       polaroidCaption: 'How gsehni works',
     },
     features: {
       feature1: {
-        title: '7 PM: Look forward to new profiles',
-        text: 'Every day at 7:00 PM, we send you potential matches that we believe you might like.',
+        title: '6 PM: Look forward to new profiles',
+        text: 'Every day at 6:00 PM, we send you potential matches that we believe you might like.',
       },
       feature2: {
         title: 'You and your valuable time matter to us',
@@ -113,11 +113,11 @@ export const translations = {
       },
       feature3: {
         title: 'Ready, set, date!',
-        text: 'Our partner venues are looking forward to providing you and your gsehni date with a safe, pleasant meeting.',
+        text: 'Our partner venues are looking forward to providing you and your gsehni date with a safe, pleasant meeting. All partner locaitons are carefully selected and know that you are coming for a gsehni date.',
       },
       feature4: {
         title: 'Safe. Verified. Unforced.',
-        text: 'All daters are verified, meet at safe locations, and ghosters lose their account. Our support team is always there for you.',
+        text: 'All users are verified, meet at safe locations, and ghosters lose their account. In any case our support team is always there for you.',
       },
       feature5: {
         title: 'Online Dating App for Offline Dates',
@@ -129,7 +129,7 @@ export const translations = {
       },
     },
     footer: {
-      copyright: '© 2025 gsehni.com. Made with Love in Switzerland.',
+      copyright: '© 2025 gsehni.com. From Zurich with Love.',
     },
     languageSwitcher: {
       de: 'Dütsch',
