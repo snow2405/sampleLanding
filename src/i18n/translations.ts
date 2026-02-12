@@ -50,6 +50,39 @@ export const translations = {
     languageSwitcher: {
       de: 'Dütsch',
       en: 'Änglish',
+    },
+    campaign: {
+      hero: {
+        title: 'Beziehige sind kei Wegwerfartikel.',
+        description: 'Mir sind zumene <u>Wegwerfgsellschaft</u> für Beziehige worde. Kein Bock. Kein Antwort. Kein Respekt.',
+      },
+      subBanner: {
+        heading: 'Wänn isch Ghosting normal worde?',
+        description: 'Dating het sich veränderet. Es isch eifacher worde, nöd z\'antworte, als ehrlich z\'si. Aber jede Mensch verdiänt Respäkt und Klarheit — au wenn\'s nöd passt. Es isch Ziit für meh Wertschätzig und ehrlechi Kommunikation im Dating.',
+        polaroidCaption: 'Stop de Cycle',
+      },
+      features: {
+        feature1: {
+          title: 'Wänn isch Stilli normal worde?',
+          text: 'Irgendwo zwüsched Match und Date sind Antwortä optional worde. Aber es goht au anders — mit echte Dates und ehrlecher Kommunikation.',
+        },
+        feature2: {
+          title: 'Quality over Quantity',
+          text: 'Hundert Matches aber kei echti Dates? Dating Apps händ oft z\'viel Fokus uf Quantität. Mir glaubed a weniger Matches, dafür echti Verbindige.',
+        },
+        feature3: {
+          title: 'E Date isch kei Konsumgut',
+          text: 'Mängisch passts eifach nöd — und das isch okay. Aber jede verdiänt es ehrlechs "Het nöd passt" anstatt eifach z\'verschwinde.',
+        },
+        feature4: {
+          title: 'Verantwortigkeit statt Ghosting',
+          text: 'Jede verdiänts, e eehrlechi Antwort z\'bübercho. E eifachs "Het nöd passt" isch besser als wuchenlang wartä, ob sich no öpper meldet.',
+        },
+        feature5: {
+          title: 'Ehrlichkeit isch sexy',
+          text: 'Ehrlich si isch nöd immer eifach, aber immer respektvoll. Mir wänd e Dating-Kultur, wo Lüüt mitänand rede statt eifach z\'verschwindä.',
+        },
+      },
     },    agb: {
       heading: 'Dateschutz & AGB',
       privacy: {
@@ -134,6 +167,39 @@ export const translations = {
     languageSwitcher: {
       de: 'Dütsch',
       en: 'Änglish',
+    },
+    campaign: {
+      hero: {
+        title: 'Relationships aren\'t disposable.',
+        description: 'We\'ve become a <u>throwaway society</u> for relationships. No interest. No reply. No respect.',
+      },
+      subBanner: {
+        heading: 'When did ghosting become normal?',
+        description: 'Dating has changed. It became easier to not respond than to be honest. But everyone deserves respect and clarity — even when it\'s not a match. It\'s time for more appreciation and honest communication in dating.',
+        polaroidCaption: 'Stop the Cycle',
+      },
+      features: {
+        feature1: {
+          title: 'When did silence become normal?',
+          text: 'Somewhere between matching and dating, replies became optional. But it can be different — with real dates and honest communication.',
+        },
+        feature2: {
+          title: 'Quality over Quantity',
+          text: 'Hundreds of matches but no real dates? Dating apps often focus too much on quantity. We believe in fewer matches, but genuine connections.',
+        },
+        feature3: {
+          title: 'A date isn\'t a consumer good',
+          text: 'Sometimes it just doesn\'t work out — and that\'s okay. But everyone deserves an honest "it didn\'t fit" instead of just disappearing.',
+        },
+        feature4: {
+          title: 'Accountability instead of ghosting',
+          text: 'Everyone deserves an honest answer. A simple "it didn\'t work out" is better than waiting weeks wondering if someone will reply.',
+        },
+        feature5: {
+          title: 'Honesty is sexy',
+          text: 'Being honest isn\'t always easy, but it\'s always respectful. We want a dating culture where people talk to each other instead of just disappearing.',
+        },
+      },
     },    agb: {
       heading: 'Privacy & Terms',
       privacy: {

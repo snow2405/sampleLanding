@@ -3,7 +3,11 @@ import { useLanguage } from "../i18n/LanguageContext";
 import { analytics } from "../utils/analytics";
 import "../styles/PhoneSignupForm.css";
 
-export default function PhoneSignupForm() {
+interface PhoneSignupFormProps {
+  customTitle?: string;
+}
+
+export default function PhoneSignupForm({ customTitle }: PhoneSignupFormProps = {}) {
   const { t } = useLanguage();
   const [phone, setPhone] = useState("");
   const [submitted, setSubmitted] = useState(false);
@@ -53,7 +57,7 @@ export default function PhoneSignupForm() {
       {!submitted ? (
         <form onSubmit={handleSubmit} className="notify-form">
           <label htmlFor="phone" className="form-label">
-            {t.hero.formLabel}
+            {customTitle || t.hero.formLabel}
           </label>
 
           <div className="form-row">

@@ -2,8 +2,13 @@ import "../styles/SubBanner.css";
 import { useLanguage } from "../i18n/LanguageContext";
 import feature6 from "../assets/feature6.jpeg";
 
-export default function SubBanner() {
+interface SubBannerProps {
+  isCampaign?: boolean;
+}
+
+export default function SubBanner({ isCampaign = false }: SubBannerProps) {
   const { t } = useLanguage();
+  const content = isCampaign ? t.campaign.subBanner : t.subBanner;
   
   return (
     <section className="subbanner">
@@ -12,17 +17,21 @@ export default function SubBanner() {
           <div className="tape"></div>
           <div className="polaroid-intro-frame">
             <div className="polaroid-intro-image">
-              <img src={feature6} alt="gsehni" />
+              {isCampaign ? (
+                <div className="polaroid-placeholder">📱💬👻</div>
+              ) : (
+                <img src={feature6} alt="gsehni" />
+              )}
             </div>
             <div className="polaroid-intro-caption">
-              <p>{t.subBanner.polaroidCaption}</p>
+              <p>{content.polaroidCaption}</p>
             </div>
           </div>
         </div>
       </div>
       <div className="subbanner-right">
-        <h2>{t.subBanner.heading}</h2>
-        <p>{t.subBanner.description}</p>
+        <h2>{content.heading}</h2>
+        <p>{content.description}</p>
       </div>
     </section>
   );

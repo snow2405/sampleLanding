@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { useEffect } from 'react';
 import { LanguageProvider } from './i18n/LanguageContext';
 import HomePage from './pages/HomePage';
+import CampaignPage from './pages/CampaignPage';
 import TermsPage from './pages/TermsPage';
 import SupportPage from './pages/SupportPage';
 import { analytics } from './utils/analytics';
@@ -25,6 +26,7 @@ function App() {
         <AnalyticsTracker />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/anti-ghosting-campaign" element={<CampaignPage />} />
           <Route path="/terms" element={<TermsPage />} />
           <Route path="/support" element={<SupportPage />} />
         </Routes>
