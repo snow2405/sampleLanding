@@ -7,21 +7,8 @@
   min-height: 100vh;
   margin: 0;
   overflow: hidden;
-  background: #FAEADD;
+  background: var(--color-roasarian);
   position: relative;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at 20% 50%, rgba(221, 170, 255, 0.08) 0%, transparent 50%),
-              radial-gradient(circle at 80% 50%, rgba(250, 234, 221, 0.12) 0%, transparent 50%);
-  pointer-events: none;
-  z-index: 1;
 }
 
 .hero-logo {

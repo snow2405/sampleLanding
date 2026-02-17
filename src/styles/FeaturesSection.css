@@ -1,5 +1,5 @@
 .features {
-  background: #FAEADD;
+  background: var(--color-roasarian);
   padding: 100px 5% 40px 5%;
   position: relative;
   min-height: 100vh;
