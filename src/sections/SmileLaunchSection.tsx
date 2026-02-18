@@ -1,6 +1,6 @@
 import "../styles/SubBanner.css";
 import { useLanguage } from "../i18n/LanguageContext";
-import launchImage from "../assets-campaign/feature3.jpeg";
+import launchImage from "../assets-campaign/campaign3.jpeg";
 
 export default function SmileLaunchSection() {
   const { t } = useLanguage();
