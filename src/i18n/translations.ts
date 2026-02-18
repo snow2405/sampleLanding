@@ -57,7 +57,7 @@ export const translations = {
     smileCampaign: {
       hero: {
         title: 'Hoii. Schön dich z\'gseh!',
-        description: 'S\'Läbe isch schön. Kompliment mache isch schöner. Du wirksch wie öpper, wo das verstaht. Gesches? Mir gsehnds! Drum wänd mir zäme mit dir es Ort schaffe, wo sich nöii Lüüt chönd träffe und authentisch kennelerne.',
+        description: 'S\'Läbe isch schön. Kompliment mache isch schöner. Du wirksch wie öpper, wo das verstaht. Drum wänd mir zäme mit dir es Ort schaffe, wo sich Lüüt chönd träffe und authentisch kennelerne.',
         formLabel: 'Wötsch debii si?',
       },
       vision: {

@@ -265,6 +265,11 @@
 
   .hero-left p {
     font-size: 1.1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .form-label {
+    margin-bottom: 1rem;
   }
 
   .hero-right {
