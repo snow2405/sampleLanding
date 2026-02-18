@@ -54,18 +54,19 @@ export const translations = {
     smileCampaign: {
       hero: {
         title: 'Hoi. Schön dich z\'gseh!',
-        description: 'S\'Läbe isch schön. Kompliment mache isch schön. Du wirksch wie öpper, wo das verstaht. Dich gsehni für das! Drum wänd mir zäme mit DIR es Ort schaffe, wo sich nöii Lüüt ungezwunge chönd träffe und kennelerne.',
+        description: 'S\'Läbe isch schön. Kompliment mache isch schöner. Du wirksch wie öpper, wo das verstaht. Gesches? Mir gsehnds! Drum wänd mir zäme mit dir es Ort schaffe, wo sich nöii Lüüt chönd träffe und authentisch kennelerne.',
         formLabel: 'Wötsch debii si?',
       },
       vision: {
         title: 'Was mir mached',
-        text: 'Mir bringed Menschen zäme für echti, ungezwungeni Treffe im echte Läbe. Es goht drum, Mönsche z\'träffe wo zu dir passed — uf Augenhöchi, ohni Druck, ohni Stress.',
-        polaroidCaption: 'Echti Mönsche. Echti Begegnige.',
+        text: 'Mir bringed Menschen zäme für echti, ungezwungeni Treffe im echte Läbe. Es goht drum, lüt z\'träffe wo zu dir passed, so wie du bisch. Authentisch, ohni Druck, ohni Stress.',
+        polaroidCaption: 'Echti Mänsche. Echti Moment.',
       },
       launch: {
-        title: 'Mir started die nöchst Wuche',
-        text: 'Gib dini Nummere ih und mir informiered dich, sobald du los chasch legä.',
-        workWithUs: 'Wötsch mit eus schaffe? Schriib eus en Liebesbrief',
+        title: 'Mir started nächst Wuche',
+        text: 'Gib dini Nummere a und mir informiered dich, sobald du chasch los legä.',
+        workWithUsQuestion: 'Wötsch mit eus schaffe?',
+        workWithUsLink: 'Schriib eus en Liebesbrief',
       },
       finalForm: {
         formLabel: 'Gib dini Nummere ih zum loszlegä',
@@ -195,18 +196,19 @@ export const translations = {
     smileCampaign: {
       hero: {
         title: 'You stood out!',
-        description: 'Life is beautiful. Giving compliments is beautiful. You seem like someone who gets that. That\'s why we\'re building gsehni (Swiss German for "a good idea") together with YOU — a space where people can meet and connect naturally.',
+        description: 'Life is beautiful. Giving compliments is beautiful. You seem like someone who gets that. That\'s why we\'re building gsehni (Swiss German for "a good idea") together with you. Because we believe in a space where people can meet and connect naturally.',
         formLabel: 'Want to be part of it?',
       },
       vision: {
         title: 'What we\'re building',
-        text: 'We bring people together for genuine, relaxed meetings in real life. It\'s about meeting people who match with you — on equal footing, without pressure, without stress.',
-        polaroidCaption: 'Real People. Real Encounters.',
+        text: 'We bring people together for genuine, relaxed meetings in real life. It\'s about meeting people who match with you, just as you are. Authentic, without pressure, without stress.',
+        polaroidCaption: 'Real People. Real Moments.',
       },
       launch: {
         title: 'We\'re launching next week',
         text: 'Enter your number and we\'ll let you know as soon as you can get started.',
-        workWithUs: 'Want to work with us? Write us a love letter',
+        workWithUsQuestion: 'Want to work with us?',
+        workWithUsLink: 'Write us a love letter',
       },
       finalForm: {
         formLabel: 'Enter your number to get started',

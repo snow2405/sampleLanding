@@ -22,7 +22,8 @@ export default function SmileCampaignPage({ lang }: SmileCampaignPageProps) {
       page_name: 'smile-campaign',
       page_path: `/smile-campaign${lang ? `/${lang}` : ''}`,
     });
-  }, [lang, setLanguage]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lang]); // Only re-run when navigating to a different language route
 
   const { t } = useLanguage();
 
