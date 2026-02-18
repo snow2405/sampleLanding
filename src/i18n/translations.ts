@@ -60,7 +60,7 @@ export const translations = {
       vision: {
         title: 'Was mir mached',
         text: 'Mir bringed Menschen zäme für echti, ungezwungeni Treffe im echte Läbe. Es goht drum, lüt z\'träffe wo zu dir passed, so wie du bisch. Authentisch, ohni Druck, ohni Stress.',
-        polaroidCaption: 'Echti Mänsche. Echti Moment.',
+        polaroidCaption: 'Echti Mensche. Echti Moment.',
       },
       launch: {
         title: 'Mir started nächst Wuche',
@@ -69,7 +69,7 @@ export const translations = {
         workWithUsLink: 'Schriib eus en Liebesbrief',
       },
       finalForm: {
-        formLabel: 'Gib dini Nummere ih zum loszlegä',
+        formLabel: 'Gib dini Nummere ih zum los legä',
       },
       footer: {
         workWithUs: 'Wötsch mit eus schaffe? Schriib eus en Liebesbrief',

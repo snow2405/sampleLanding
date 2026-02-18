@@ -28,6 +28,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/anti-ghosting-campaign" element={<CampaignPage />} />
+          <Route path="/smile" element={<SmileCampaignPage />} />
           <Route path="/smile-campaign" element={<SmileCampaignPage />} />
           <Route path="/smile/de" element={<SmileCampaignPage lang="de" />} />
           <Route path="/smile/en" element={<SmileCampaignPage lang="en" />} />

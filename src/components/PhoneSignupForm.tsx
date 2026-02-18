@@ -71,7 +71,7 @@ export default function PhoneSignupForm({ customTitle }: PhoneSignupFormProps = 
               required
               disabled={loading}
               inputMode="tel"
-              pattern="^[+0-9\s()-]*$"
+              pattern="^[+0-9\s()\-]*$"
               title={t.hero.phoneTitle}
             />
 
