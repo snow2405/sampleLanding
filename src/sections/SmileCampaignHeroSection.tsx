@@ -12,7 +12,7 @@ export default function SmileCampaignHeroSection() {
 
   return (
     <section className="hero">
-      <div className="hero-logo">I like your smile</div>
+      <div className="hero-logo">I like your smile.</div>
       <LanguageSwitcher />
       <div className="hero-left">
         <h1>{t.smileCampaign.hero.title}</h1>
