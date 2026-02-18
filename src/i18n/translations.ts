@@ -65,6 +65,10 @@ export const translations = {
       launch: {
         title: 'Mir started die nöchst Wuche',
         text: 'Gib dini Nummere ih und mir informiered dich, sobald du los chasch legä.',
+        workWithUs: 'Wötsch mit eus schaffe? Schriib eus en Liebesbrief',
+      },
+      finalForm: {
+        formLabel: 'Gib dini Nummere ih zum loszlegä',
       },
       footer: {
         workWithUs: 'Wötsch mit eus schaffe? Schriib eus en Liebesbrief',
@@ -202,6 +206,10 @@ export const translations = {
       launch: {
         title: 'We\'re launching next week',
         text: 'Enter your number and we\'ll let you know as soon as you can get started.',
+        workWithUs: 'Want to work with us? Write us a love letter',
+      },
+      finalForm: {
+        formLabel: 'Enter your number to get started',
       },
       footer: {
         workWithUs: 'Want to work with us? Write us a love letter',

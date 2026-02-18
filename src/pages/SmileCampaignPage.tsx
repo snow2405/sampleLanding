@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import SmileCampaignHeroSection from '../sections/SmileCampaignHeroSection';
 import SmileVisionSection from '../sections/SmileVisionSection';
 import SmileLaunchSection from '../sections/SmileLaunchSection';
+import PhoneSignupForm from '../components/PhoneSignupForm';
 import Footer from '../sections/Footer';
 import { analytics } from '../utils/analytics';
 import { useLanguage, type Language } from '../i18n/LanguageContext';
@@ -23,11 +24,14 @@ export default function SmileCampaignPage({ lang }: SmileCampaignPageProps) {
     });
   }, [lang, setLanguage]);
 
+  const { t } = useLanguage();
+
   return (
     <>
       <SmileCampaignHeroSection />
       <SmileVisionSection />
       <SmileLaunchSection />
+      <PhoneSignupForm customTitle={t.smileCampaign.finalForm.formLabel} />
       <Footer /> 
     </>
   );

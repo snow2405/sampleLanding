@@ -10,6 +10,11 @@ export default function SmileLaunchSection() {
       <div className="subbanner-right" style={{ order: 1 }}>
         <h2>{t.smileCampaign.launch.title}</h2>
         <p>{t.smileCampaign.launch.text}</p>
+        <p style={{ marginTop: '1rem', fontSize: '0.95rem', opacity: 0.8 }}>
+          <a href="mailto:hoi@gsehni.com" style={{ color: 'inherit', textDecoration: 'underline' }}>
+            {t.smileCampaign.launch.workWithUs}
+          </a>
+        </p>
       </div>
       <div className="subbanner-left" style={{ order: 2 }}>
         <div className="polaroid-intro">
