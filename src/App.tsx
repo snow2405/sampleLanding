@@ -36,9 +36,9 @@ function App() {
           <Route path="/s/de" element={<SmileCampaignPage lang="de" />} />
           <Route path="/s/en" element={<SmileCampaignPage lang="en" />} />
           
-          {/* QR Code entry points - these track scans and redirect */}
-          <Route path="/de" element={<QRCodeRedirect />} />
-          <Route path="/en" element={<QRCodeRedirect />} />
+          {/* QR Code entry points - these track scans and redirect to /s/{lang} */}
+          <Route path="/smile/de" element={<QRCodeRedirect />} />
+          <Route path="/smile/en" element={<QRCodeRedirect />} />
           
           <Route path="/terms" element={<TermsPage />} />
           <Route path="/support" element={<SupportPage />} />
