@@ -7,6 +7,7 @@ import CampaignPage from './pages/CampaignPage';
 import SmileCampaignPage from './pages/SmileCampaignPage';
 import TermsPage from './pages/TermsPage';
 import SupportPage from './pages/SupportPage';
+import QRCodeRedirect from './pages/QRCodeRedirect';
 import { analytics } from './utils/analytics';
 
 function AnalyticsTracker() {
@@ -32,6 +33,9 @@ function App() {
           <Route path="/smile-campaign" element={<SmileCampaignPage />} />
           <Route path="/smile/de" element={<SmileCampaignPage lang="de" />} />
           <Route path="/smile/en" element={<SmileCampaignPage lang="en" />} />
+          {/* QR Code redirect routes */}
+          <Route path="/en" element={<QRCodeRedirect />} />
+          <Route path="/de" element={<QRCodeRedirect />} />
           <Route path="/terms" element={<TermsPage />} />
           <Route path="/support" element={<SupportPage />} />
         </Routes>

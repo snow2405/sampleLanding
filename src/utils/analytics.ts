@@ -1,5 +1,7 @@
 // Analytics utility for tracking events
-// Works with Google Analytics, Plausible, or custom analytics solutions
+// Works with Google Analytics, Plausible, Vercel Analytics, or custom analytics solutions
+
+import { track } from '@vercel/analytics';
 
 interface EventParams {
   [key: string]: string | number | boolean;
@@ -49,6 +51,9 @@ export const analytics = {
       if (typeof window.plausible === 'function') {
         window.plausible(eventName, { props: params });
       }
+
+      // Vercel Analytics
+      track(eventName, params);
 
       // Console log for development
       console.log('[Analytics] Event:', eventName, params);
