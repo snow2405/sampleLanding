@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLanguage } from "../i18n/LanguageContext";
+import { useLocation } from "react-router-dom";
 import { analytics } from "../utils/analytics";
 import "../styles/PhoneSignupForm.css";
 
@@ -9,9 +10,33 @@ interface PhoneSignupFormProps {
 
 export default function PhoneSignupForm({ customTitle }: PhoneSignupFormProps = {}) {
   const { t } = useLanguage();
+  const location = useLocation();
   const [phone, setPhone] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [signupSource, setSignupSource] = useState<string>('unknown');
+
+  // Determine signup source on mount
+  useEffect(() => {
+    // Check if user came from QR code
+    const qrSource = sessionStorage.getItem('signup_source');
+    
+    if (qrSource) {
+      setSignupSource(qrSource);
+    } else {
+      // Determine source from current page
+      const path = location.pathname;
+      if (path === '/') {
+        setSignupSource('homepage');
+      } else if (path === '/anti-ghosting-campaign') {
+        setSignupSource('anti-ghosting-campaign');
+      } else if (path.includes('/smile')) {
+        setSignupSource('smile-campaign');
+      } else {
+        setSignupSource('other-page');
+      }
+    }
+  }, [location]);
 
   const phoneRegex = /^[+0-9\s()-]*$/;
 
@@ -37,7 +62,20 @@ export default function PhoneSignupForm({ customTitle }: PhoneSignupFormProps = 
         body: JSON.stringify({ phone }),
       });
       setSubmitted(true);
+      
+      // Track phone submission with source and phone number
+      analytics.event('phone_number_submitted', {
+        source: signupSource,
+        phone_number: phone,
+        timestamp: new Date().toISOString(),
+        page: location.pathname,
+      });
+      
       analytics.formSubmit('phone_signup', true);
+      
+      // Clear QR source after successful submission
+      sessionStorage.removeItem('signup_source');
+      sessionStorage.removeItem('signup_source_timestamp');
     } catch (err) {
       console.error("Error submitting phone:", err);
       alert(t.hero.errorSubmit);

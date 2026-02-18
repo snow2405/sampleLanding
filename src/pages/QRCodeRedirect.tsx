@@ -35,6 +35,10 @@ export default function QRCodeRedirect() {
 
       console.log('[QR Code] Tracked scan:', eventName);
 
+      // Store source in sessionStorage for later tracking
+      sessionStorage.setItem('signup_source', `qr-code-${lang}`);
+      sessionStorage.setItem('signup_source_timestamp', new Date().toISOString());
+
       // Wait a bit to ensure analytics events are sent
       await new Promise(resolve => setTimeout(resolve, 300));
 
