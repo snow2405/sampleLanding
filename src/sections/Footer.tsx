@@ -20,23 +20,27 @@ export default function Footer() {
       <div className="footer-content">
         <p>{t.footer.copyright}</p>
         <div className="footer-links">
-          {isSmileCampaign ? (
-            <>
-              <a 
-                href="mailto:hoi@gsehni.com" 
-                onClick={() => handleLinkClick('contact')}
-              >
-                {t.smileCampaign.footer.workWithUs}
-              </a>
-              <Link to="/" onClick={() => handleLinkClick('main_page')}>
-                {t.smileCampaign.footer.backToMain}
-              </Link>
-            </>
-          ) : isCampaignPage ? (
-            <Link to="/" onClick={() => handleLinkClick('main_page')}>← Back to Main Page</Link>
-          ) : (
-            <Link to="/anti-ghosting-campaign" onClick={() => handleLinkClick('campaign')}>Anti-Ghosting Campaign</Link>
+          {/* Work with us - always shown */}
+          <a 
+            href="mailto:hoi@gsehni.com" 
+            onClick={() => handleLinkClick('contact')}
+          >
+            {t.footer.workWithUs}
+          </a>
+          
+          {/* Campaign links - show the campaign you're NOT on */}
+          {!isCampaignPage && (
+            <Link to="/anti-ghosting-campaign" onClick={() => handleLinkClick('anti_ghosting_campaign')}>
+              {t.footer.antiGhostingCampaign}
+            </Link>
           )}
+          {!isSmileCampaign && (
+            <Link to="/smile-campaign" onClick={() => handleLinkClick('smile_campaign')}>
+              {t.footer.smileCampaign}
+            </Link>
+          )}
+          
+          {/* Standard links */}
           <Link to="/terms" onClick={() => handleLinkClick('terms')}>Terms & Privacy</Link>
           <Link to="/support" onClick={() => handleLinkClick('support')}>Support</Link>
         </div>

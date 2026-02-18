@@ -1,6 +1,6 @@
 import "../styles/SubBanner.css";
 import { useLanguage } from "../i18n/LanguageContext";
-import visionImage from "../assets/feature1.jpeg";
+import visionImage from "../assets/feature6.jpeg";
 
 export default function SmileVisionSection() {
   const { t } = useLanguage();

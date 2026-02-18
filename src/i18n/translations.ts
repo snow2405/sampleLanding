@@ -46,6 +46,9 @@ export const translations = {
     },
     footer: {
       copyright: '© 2025 gsehni.com. Mit viel liebii us Züri.',
+      workWithUs: 'Wötsch mit eus schaffe? Schriib eus en Liebesbrief',
+      antiGhostingCampaign: 'Anti-Ghosting Kampagne',
+      smileCampaign: 'Smile Kampagne',
     },
     languageSwitcher: {
       de: 'Dütsch',
@@ -53,7 +56,7 @@ export const translations = {
     },
     smileCampaign: {
       hero: {
-        title: 'Hoi. Schön dich z\'gseh!',
+        title: 'Hoii. Schön dich z\'gseh!',
         description: 'S\'Läbe isch schön. Kompliment mache isch schöner. Du wirksch wie öpper, wo das verstaht. Gesches? Mir gsehnds! Drum wänd mir zäme mit dir es Ort schaffe, wo sich nöii Lüüt chönd träffe und authentisch kennelerne.',
         formLabel: 'Wötsch debii si?',
       },
@@ -188,6 +191,9 @@ export const translations = {
     },
     footer: {
       copyright: '© 2025 gsehni.com. From Zurich with Love.',
+      workWithUs: 'Want to work with us? Write us a love letter',
+      antiGhostingCampaign: 'Anti-Ghosting Campaign',
+      smileCampaign: 'Smile Campaign',
     },
     languageSwitcher: {
       de: 'Dütsch',
