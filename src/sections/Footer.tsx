@@ -8,8 +8,9 @@ export default function Footer() {
   const location = useLocation();
   const isCampaignPage = location.pathname === '/anti-ghosting-campaign';
   const isSmileCampaign = location.pathname === '/smile-campaign' || 
-                         location.pathname === '/smile/de' || 
-                         location.pathname === '/smile/en';
+                         location.pathname === '/smile' ||
+                         location.pathname === '/s/de' || 
+                         location.pathname === '/s/en';
   
   const handleLinkClick = (linkName: string) => {
     analytics.buttonClick(`footer_link_${linkName}`, 'footer');

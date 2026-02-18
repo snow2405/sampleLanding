@@ -31,11 +31,15 @@ function App() {
           <Route path="/anti-ghosting-campaign" element={<CampaignPage />} />
           <Route path="/smile" element={<SmileCampaignPage />} />
           <Route path="/smile-campaign" element={<SmileCampaignPage />} />
-          <Route path="/smile/de" element={<SmileCampaignPage lang="de" />} />
-          <Route path="/smile/en" element={<SmileCampaignPage lang="en" />} />
-          {/* QR Code redirect routes */}
-          <Route path="/en" element={<QRCodeRedirect />} />
+          
+          {/* Shareable smile campaign URLs (destination after QR scan) */}
+          <Route path="/s/de" element={<SmileCampaignPage lang="de" />} />
+          <Route path="/s/en" element={<SmileCampaignPage lang="en" />} />
+          
+          {/* QR Code entry points - these track scans and redirect */}
           <Route path="/de" element={<QRCodeRedirect />} />
+          <Route path="/en" element={<QRCodeRedirect />} />
+          
           <Route path="/terms" element={<TermsPage />} />
           <Route path="/support" element={<SupportPage />} />
         </Routes>

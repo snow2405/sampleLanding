@@ -42,8 +42,8 @@ export default function QRCodeRedirect() {
       // Wait a bit to ensure analytics events are sent
       await new Promise(resolve => setTimeout(resolve, 300));
 
-      // Redirect to smile campaign with language
-      navigate(`/smile/${lang}`, { replace: true });
+      // Redirect to shareable smile campaign URL (not /de or /en)
+      navigate(`/s/${lang}`, { replace: true });
     };
 
     trackAndRedirect();

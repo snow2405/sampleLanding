@@ -30,7 +30,7 @@ export default function PhoneSignupForm({ customTitle }: PhoneSignupFormProps = 
         setSignupSource('homepage');
       } else if (path === '/anti-ghosting-campaign') {
         setSignupSource('anti-ghosting-campaign');
-      } else if (path.includes('/smile')) {
+      } else if (path.includes('/smile') || path.startsWith('/s/')) {
         setSignupSource('smile-campaign');
       } else {
         setSignupSource('other-page');
