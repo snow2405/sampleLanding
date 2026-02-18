@@ -202,7 +202,7 @@ export const translations = {
     smileCampaign: {
       hero: {
         title: 'You stood out!',
-        description: 'Life is beautiful. Giving compliments is beautiful. You seem like someone who gets that. That\'s why we\'re building gsehni (Swiss German for "a good idea") together with you. Because we believe in a space where people can meet and connect naturally.',
+        description: 'Life is beautiful. Giving compliments is beautiful. You seem like someone who gets that. That\'s why we\'re building gsehni (Swiss German for "a good idea") together with you. Because we are a space where people can be lovely with each other.',
         formLabel: 'Want to be part of it?',
       },
       vision: {
