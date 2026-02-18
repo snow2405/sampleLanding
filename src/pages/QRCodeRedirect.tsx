@@ -7,8 +7,9 @@ export default function QRCodeRedirect() {
   const navigate = useNavigate();
   const location = useLocation();
   
-  // Extract language from pathname
-  const lang = location.pathname === '/en' ? 'en' : location.pathname === '/de' ? 'de' : null;
+  // Extract language from pathname (/smile/de or /smile/en)
+  const lang = location.pathname === '/smile/en' ? 'en' : 
+               location.pathname === '/smile/de' ? 'de' : null;
 
   useEffect(() => {
     const trackAndRedirect = async () => {
@@ -42,7 +43,7 @@ export default function QRCodeRedirect() {
       // Wait a bit to ensure analytics events are sent
       await new Promise(resolve => setTimeout(resolve, 300));
 
-      // Redirect to shareable smile campaign URL (not /de or /en)
+      // Redirect to shareable smile campaign URL (not /smile/de or /smile/en)
       navigate(`/s/${lang}`, { replace: true });
     };
 
