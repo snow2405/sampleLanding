@@ -3,8 +3,8 @@ export const translations = {
     hero: {
       title: 'Die Eifachi, Sicheri und Seriösi Dating App. Ready to jump in?',
       description: 'Gang uf spannendi <u>offline</u> Dates anstatt dini Ziit mit endlosem Swipe und Chatte z\'verschwende.',
-      formLabel: '✨ Wötsch Nummere ustüschle? ✨',
-      phonePlaceholder: '+41 79 123 45 67',
+      formLabel: 'Slient-Beta launching - für invite-code bewerbe:',
+      phonePlaceholder: '✨ Wötsch Nummere ustüschle? ✨',
       phoneTitle: 'Bitte gib nur Ziffern und das + Zeichen ein.',
       buttonLoading: 'Wird gschickt...',
       buttonSubmit: 'gsehni!',
@@ -148,8 +148,8 @@ export const translations = {
     hero: {
       title: 'The Simple, Safe and Serious dating app. Ready to jump in?',
       description: 'Go on exciting <u>offline</u> dates instead of wasting your time with endless swiping and chatting.',
-      formLabel: '✨ Want to exchange numbers? ✨',
-      phonePlaceholder: '+41 79 123 45 67',
+      formLabel: 'Slient-Beta launching - apply for invite:',
+      phonePlaceholder: '✨ Want to exchange numbers? ✨',
       phoneTitle: 'Please enter only digits and the + sign.',
       buttonLoading: 'Sending...',
       buttonSubmit: 'gsehni!',
