@@ -58,7 +58,7 @@ export const translations = {
       hero: {
         title: 'Hoii. Schön dich z\'gseh!',
         description: 'S\'Läbe isch schön. Kompliment mache isch schöner. Du wirksch wie öpper, wo das verstaht. Drum wänd mir zäme mit dir es Ort schaffe, wo sich Lüüt chönd träffe und authentisch kennelerne.',
-        formLabel: 'Wötsch debii si?',
+        formLabel: 'Launching (silently) - für invite-code bewerbe:',
       },
       vision: {
         title: 'Was mir mached',
@@ -202,8 +202,8 @@ export const translations = {
     smileCampaign: {
       hero: {
         title: 'You stood out!',
-        description: 'Life is beautiful. Giving compliments is beautiful. You seem like someone who gets that. That\'s why we\'re building gsehni (Swiss German for "a good idea") together with you. Because all you need is love.',
-        formLabel: 'Want to be part of it?',
+        description: 'Life is beautiful. Giving compliments is beautiful. You seem like someone who gets that. That\'s why we\'re building gsehni (Swiss German for "a good idea") together with you.',
+        formLabel: 'Launching (silently) - apply for invite code:',
       },
       vision: {
         title: 'What we\'re building',
