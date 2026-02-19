@@ -1,7 +1,9 @@
 import { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { analytics } from '../utils/analytics';
-import { track } from '@vercel/analytics';
+
+// Storage keys for QR tracking (same as ShortLinkRedirect)
+const QR_TRACKING_CODE_KEY = 'qr_tracking_code';
+const QR_TRACKING_TIMESTAMP_KEY = 'qr_tracking_timestamp';
 
 export default function QRCodeRedirect() {
   const navigate = useNavigate();
@@ -12,42 +14,24 @@ export default function QRCodeRedirect() {
                location.pathname === '/smile/de' ? 'de' : null;
 
   useEffect(() => {
-    const trackAndRedirect = async () => {
-      if (!lang) {
-        navigate('/smile-campaign', { replace: true });
-        return;
-      }
+    if (!lang) {
+      navigate('/smile-campaign', { replace: true });
+      return;
+    }
 
-      // Track QR code scan event
-      const eventName = `qr_code_scan_${lang}`;
-      
-      // Send to both custom analytics and Vercel Analytics
-      analytics.event('qr_code_scan', {
-        language: lang,
-        scan_type: 'unique',
-        timestamp: new Date().toISOString(),
-      });
-      
-      // Vercel Analytics tracking
-      track('QR Code Scan', {
-        language: lang,
-        event: eventName,
-      });
+    // Use legacy code format for existing QR codes
+    const trackingCode = `smile-${lang}`;
+    
+    // Store tracking info - will be picked up by destination page
+    sessionStorage.setItem(QR_TRACKING_CODE_KEY, trackingCode);
+    sessionStorage.setItem(QR_TRACKING_TIMESTAMP_KEY, new Date().toISOString());
 
-      console.log('[QR Code] Tracked scan:', eventName);
+    // Store source for signup attribution (existing system)
+    sessionStorage.setItem('signup_source', `qr-code-${lang}`);
+    sessionStorage.setItem('signup_source_timestamp', new Date().toISOString());
 
-      // Store source in sessionStorage for later tracking
-      sessionStorage.setItem('signup_source', `qr-code-${lang}`);
-      sessionStorage.setItem('signup_source_timestamp', new Date().toISOString());
-
-      // Wait a bit to ensure analytics events are sent
-      await new Promise(resolve => setTimeout(resolve, 300));
-
-      // Redirect to shareable smile campaign URL (not /smile/de or /smile/en)
-      navigate(`/s/${lang}`, { replace: true });
-    };
-
-    trackAndRedirect();
+    // Redirect to shareable smile campaign URL - tracking fires after redirect
+    navigate(`/s/${lang}`, { replace: true });
   }, [lang, navigate]);
 
   // Show a brief loading message while redirecting

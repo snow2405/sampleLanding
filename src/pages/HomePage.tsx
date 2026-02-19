@@ -5,8 +5,12 @@ import SubBanner from '../sections/SubBanner';
 import Footer from '../sections/Footer';
 import PhoneSignupForm from '../components/PhoneSignupForm';
 import { analytics } from '../utils/analytics';
+import { useQRCodeTracking } from '../utils/useQRCodeTracking';
 
 export default function HomePage() {
+  // Fire QR code tracking if user arrived via short link
+  useQRCodeTracking();
+  
   useEffect(() => {
     analytics.event('page_visit', {
       page_name: 'home',

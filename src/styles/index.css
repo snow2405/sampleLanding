@@ -69,6 +69,13 @@ body::-webkit-scrollbar {
   }
 }
 
+@media (min-width: 1921px) {
+  html,
+  body {
+    background-color: var(--color-roasarian);
+  }
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;

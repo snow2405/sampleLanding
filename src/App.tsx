@@ -8,6 +8,7 @@ import SmileCampaignPage from './pages/SmileCampaignPage';
 import TermsPage from './pages/TermsPage';
 import SupportPage from './pages/SupportPage';
 import QRCodeRedirect from './pages/QRCodeRedirect';
+import ShortLinkRedirect from './pages/ShortLinkRedirect';
 import { analytics } from './utils/analytics';
 
 function AnalyticsTracker() {
@@ -42,6 +43,10 @@ function App() {
           
           <Route path="/terms" element={<TermsPage />} />
           <Route path="/support" element={<SupportPage />} />
+          
+          {/* Short link QR codes - maps /:code to various destinations */}
+          {/* See src/config/shortLinks.ts for all codes */}
+          <Route path="/:code" element={<ShortLinkRedirect />} />
         </Routes>
       </Router>
     </LanguageProvider>

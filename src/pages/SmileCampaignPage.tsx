@@ -5,6 +5,7 @@ import SmileLaunchSection from '../sections/SmileLaunchSection';
 import PhoneSignupForm from '../components/PhoneSignupForm';
 import Footer from '../sections/Footer';
 import { analytics } from '../utils/analytics';
+import { useQRCodeTracking } from '../utils/useQRCodeTracking';
 import { useLanguage, type Language } from '../i18n/LanguageContext';
 
 interface SmileCampaignPageProps {
@@ -13,6 +14,9 @@ interface SmileCampaignPageProps {
 
 export default function SmileCampaignPage({ lang }: SmileCampaignPageProps) {
   const { setLanguage } = useLanguage();
+  
+  // Fire QR code tracking if user arrived via short link
+  useQRCodeTracking();
   
   useEffect(() => {
     if (lang) {
