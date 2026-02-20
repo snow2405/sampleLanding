@@ -5,6 +5,7 @@ import { LanguageProvider } from './i18n/LanguageContext';
 import HomePage from './pages/HomePage';
 import CampaignPage from './pages/CampaignPage';
 import SmileCampaignPage from './pages/SmileCampaignPage';
+import SmartCampaignPage from './pages/SmartCampaignPage';
 import TermsPage from './pages/TermsPage';
 import SupportPage from './pages/SupportPage';
 import QRCodeRedirect from './pages/QRCodeRedirect';
@@ -40,6 +41,9 @@ function App() {
           {/* QR Code entry points - these track scans and redirect to /s/{lang} */}
           <Route path="/smile/de" element={<QRCodeRedirect />} />
           <Route path="/smile/en" element={<QRCodeRedirect />} />
+          
+          {/* Smart campaign - riddle solvers */}
+          <Route path="/smart" element={<SmartCampaignPage />} />
           
           <Route path="/terms" element={<TermsPage />} />
           <Route path="/support" element={<SupportPage />} />

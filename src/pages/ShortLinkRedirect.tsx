@@ -35,6 +35,8 @@ export default function ShortLinkRedirect() {
       sessionStorage.setItem('signup_source', `qr-code-en`);
     } else if (destination === 'smile-de') {
       sessionStorage.setItem('signup_source', `qr-code-de`);
+    } else if (destination === 'smart') {
+      sessionStorage.setItem('signup_source', `qr-code-smart`);
     } else {
       sessionStorage.setItem('signup_source', `qr-code-home`);
     }

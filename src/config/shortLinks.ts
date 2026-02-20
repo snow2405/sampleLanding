@@ -1,7 +1,7 @@
 // Short link mappings for QR code tracking
 // Each code maps to a destination and will be tracked as qr_code_scan event
 
-export type Destination = 'smile-en' | 'smile-de' | 'homepage';
+export type Destination = 'smile-en' | 'smile-de' | 'homepage' | 'smart';
 
 export interface ShortLinkConfig {
   code: string;
@@ -13,6 +13,7 @@ export const destinationPaths: Record<Destination, string> = {
   'smile-en': '/s/en',
   'smile-de': '/s/de',
   'homepage': '/',
+  'smart': '/smart',
 };
 
 // All short link codes
@@ -52,6 +53,11 @@ export const shortLinks: ShortLinkConfig[] = [
   { code: 'sg', destination: 'homepage' },
   { code: 'ti', destination: 'homepage' },
   { code: 'ua', destination: 'homepage' },
+  
+  // === SMART CAMPAIGN (riddle solvers) ===
+  { code: 'code', destination: 'smart' },
+  { code: 'true', destination: 'smart' },
+  { code: 'win', destination: 'smart' },
   
   // === LEGACY CODES (keep existing /smile/de and /smile/en working) ===
   // These are handled separately in QRCodeRedirect but included here for reference

@@ -79,6 +79,13 @@ export const translations = {
         backToMain: '← Zrugg zur Hauptsite',
       },
     },
+    smartCampaign: {
+      hero: {
+        title: 'Mängisch sind die beschte Sache im Läbe versteckt.',
+        description: 'Du hesch de Code gknackt. Genau so wänd mir au d\'Liebi im digitale Zitalter löse, mit chi Hirn, Herz und ganz vill liebii. Drum baued mir zäme mit dir en Ort, wo sich Lüüt chönd träffe und authentisch kennelerne.',
+        formLabel: 'Launching (silently) - für invite-code bewerbe:',
+      },
+    },
     campaign: {
       hero: {
         title: 'Beziehige sind kei Wegwerfartikel.',
@@ -222,6 +229,13 @@ export const translations = {
       footer: {
         workWithUs: 'Want to work with us? Write us a love letter',
         backToMain: '← Back to Main Page',
+      },
+    },
+    smartCampaign: {
+      hero: {
+        title: 'Sometimes the best things in life are hidden in plain sight.',
+        description: 'You cracked the code. That\'s exactly how we want to solve love in the digital age: with brains, heart, and real connections. That\'s why we\'re building gsehni together with you, a place where people can meet and get to know each other authentically.',
+        formLabel: 'Launching (silently) - apply for invite code:',
       },
     },
     campaign: {
